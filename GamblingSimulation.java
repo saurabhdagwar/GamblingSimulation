@@ -66,13 +66,22 @@ class GamblingSimulation
 			System.out.print("Unluckiest days in months are : ");
 			System.out.println(" "+unluckiest_day);
 
-			
+
 	}
 
 	public static void main(String args[])
 	{
+		Scanner scan = new Scanner(System.in);
+		int user_decide = 1;
 		GamblingSimulation GamSim = new GamblingSimulation();
-		GamblingGame();
+//UC7 if player would like to continuee for next month or not
+		while(user_decide != 2)
+		{
+			GamblingGame();
+			System.out.println("Press 2 for quit game or any number to continue for next month ");
+			user_decide=scan.nextInt();
+
+		}
 
 	}
 }
