@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 class GamblingSimulation
 {
@@ -10,8 +11,11 @@ class GamblingSimulation
 	public static void GamblingGame()
 	{
 		int game_result;
+		ArrayList<Integer> luckiest_day= new ArrayList<Integer>(); 
+		ArrayList<Integer> unluckiest_day= new ArrayList<Integer>();
 		int monthly_investment_amount = 0;
 		int total_amount = 0;
+
 // UC4 for a month find total amount 
 		for(int day = 1 ; day <= DAYS_IN_MONTH ; day++)
 			{
@@ -33,10 +37,13 @@ class GamblingSimulation
 				if(game_result > STACK_AMOUNT )
 				{
 					System.out.println("Result of day :"+day+" is  Gambler Won $"+game_result);
+					luckiest_day.add(day);
 				}
 				else
 				{
 					System.out.println("Result of day :"+day+" is Gambler loss $"+game_result);
+					unluckiest_day.add(day);
+
 				}
 //UC5 Total month result by how much amount
 				monthly_investment_amount = monthly_investment_amount + STACK_AMOUNT;
@@ -49,7 +56,17 @@ class GamblingSimulation
 				System.out.println("Gambler won $"+(total_amount-monthly_investment_amount));
 			}
 			else
+			{
 				System.out.println("Gambler lost $"+(monthly_investment_amount-total_amount));
+			}
+//UC6 Luckiest and Unluckiest days in month
+			System.out.print("Luckiest days in months are : ");
+			System.out.println(" "+luckiest_day);
+
+			System.out.print("Unluckiest days in months are : ");
+			System.out.println(" "+unluckiest_day);
+
+			
 	}
 
 	public static void main(String args[])
