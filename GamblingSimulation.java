@@ -11,6 +11,7 @@ class GamblingSimulation
 	{
 		int game_result;
 		int total_amount = 0;
+//UC4 perform whole operation for a month
 		for(int day = 1 ; day < DAYS_IN_MONTH ; day++)
 			{
 				game_result = STACK_AMOUNT ;
