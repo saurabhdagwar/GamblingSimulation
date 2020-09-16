@@ -1,5 +1,4 @@
 import java.util.*;
-
 class GamblingSimulation
 {
 //US1 Initialising stack and betting amount
@@ -27,6 +26,5 @@ class GamblingSimulation
 	{
 		GamblingSimulation GamSim = new GamblingSimulation();
 		GamblingGame();
-
 	}
 }
