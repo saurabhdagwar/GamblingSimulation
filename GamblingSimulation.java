@@ -11,7 +11,7 @@ class GamblingSimulation
 	public static void GamblingGame()
 	{
 		int gameResult;
-		ArrayList<Integer> luckiestDay= new ArrayList<Integer>(); 
+		ArrayList<Integer> luckiestDay= new ArrayList<Integer>();
 		ArrayList<Integer> unluckiestDay= new ArrayList<Integer>();
 		int monthlyInvestmentAmount = 0;
 		int totalAmount = 0;
