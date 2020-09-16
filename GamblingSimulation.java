@@ -1,13 +1,11 @@
 import java.util.*;
 import java.io.*;
-
 class GamblingSimulation
 {
 //US1 Initialising stack and betting amount
 	static final int STACKAMOUNT = 100 ;
 	static final int BETTINGAMOUNT = 1 ;
 	static final int DAYSINMONTH = 30 ;
-
 	public static void GamblingGame()
 	{
 		int gameResult;
@@ -15,7 +13,6 @@ class GamblingSimulation
 		ArrayList<Integer> unluckiestDay= new ArrayList<Integer>();
 		int monthlyInvestmentAmount = 0;
 		int totalAmount = 0;
-
 // UC4 for a month find total amount 
 		for(int day = 1 ; day <= DAYSINMONTH ; day++)
 		{
@@ -43,7 +40,6 @@ class GamblingSimulation
 			{
 				System.out.println("Result of day :"+day+" is Gambler loss $"+gameResult);
 				unluckiestDay.add(day);
-
 			}
 //UC5 Total month result by how much amount
 			monthlyInvestmentAmount = monthlyInvestmentAmount + STACKAMOUNT;
@@ -62,18 +58,13 @@ class GamblingSimulation
 //UC6 Luckiest and Unluckiest days in month
 		System.out.print("Luckiest days in months are : ");
 		System.out.println(" "+luckiestDay);
-
 		System.out.print("Unluckiest days in months are : ");
 		System.out.println(" "+unluckiestDay);
-
-
 	}
-
 	public static void main(String args[])
 	{
 		Scanner scan = new Scanner(System.in);
 		int user_decide = 1;
-//		GamblingSimulation GamSim = new GamblingSimulation();
 //UC7 if player would like to continuee for next month or not
 		while(user_decide != 2)
 		{
